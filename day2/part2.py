@@ -21,7 +21,6 @@ with open('input.txt', 'r') as file:
         if checkList(numList):
             numSafe += 1
         else:
-            checkSingleRule = False
             for i in range(len(numList)):
                 newList = numList[:i]
                 newList.extend(numList[i+1:])
