@@ -7,11 +7,7 @@ def part1() -> int:
         corruptedData = file.read()
 
     mulList = re.findall("mul\(\d*,\d*\)", corruptedData)
-    for mul in mulList:
-        numbers = re.findall("\d+", mul)
-        x, y = [int(num) for num in numbers]
-        answer += (x*y)
-
+    answer = multiply(mulList)
     return answer
 
 
