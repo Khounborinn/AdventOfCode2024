@@ -26,7 +26,7 @@ def multiply(mulList) -> int:
             checkMultiply = True
         elif mul == "don't()":
             checkMultiply = False
-        if checkMultiply and mul != "do()":
+        elif checkMultiply:
             numbers = re.findall("\d+", mul)
             x, y = [int(num) for num in numbers]
             answer += (x*y)
